@@ -37,7 +37,7 @@ const app=express();
 
 //enable cors request
 app.use(cors({
-    origin: 'http://localhost:5173',  // allow all origin
+    origin: 'https://capstone-vechicle-care-frontend-1.vercel.app',  // allow all origin
     credentials: true
 }));
 
