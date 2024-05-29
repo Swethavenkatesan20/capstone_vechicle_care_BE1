@@ -1,3 +1,18 @@
+# Vehicle care backend process
+installed required packages created models controllers routes.
+in models created user services review and appointments
+similary created controllers and respective routes.
+
+middleware is created to add auth
+verifyToken and isAdmin token is used here
+
+for user after registering and login toen will be generated 
+to get update delete user verifyToken is used
+
+admin part is to create services and get appointments
+for this isAdmin is used. 
+
+
 # Backend aplication for vechicle car service
 backend has express nodejs and mongodb as database
 
@@ -35,7 +50,56 @@ backend has express nodejs and mongodb as database
            delete/api/users/profile
         logout user
             GET/api/users/logout
+
+    2.services
+        create service
+          POST/api/services/
+        get service
+           GET/api/services/
+    
+ 
+   3.appointments
+   
+           POST/api/appointments
+           
+           GET/api/appointments
+           
+   4.reviews
+   
+           POST/api/reviews
+           
+           GET/api/reviews
+           
 # router
 
+1.userRoutes
 
-# controllers
+        here created routes with auth verification
+        
+        after POST, to GET PUT DELETE user there is auth.verifyToken is used
+        
+
+2.serviceRoutes
+
+       service routes is created by admin
+       
+       to POST services there is auth.verifyToken and auth.isAdmin verify token if user is admin he can create services
+       
+3.reviewRoutes
+
+        POST and GET routes is created
+        
+        for POST verifyToken is used
+        
+        for GET no token all user reviews will be get by current users
+        
+4.appointmentRoutes
+
+        POST and GET routes is used
+        
+        for POST auth.verifyToken to check appointment is booked by user
+        
+        for GET auth.verifyToken and auth.isAdmin to check loged user is admin or not if admin he/she can see all the booked appointments
+
+
+
